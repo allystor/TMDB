@@ -10,8 +10,12 @@ const NavBar = () => {
     const navigate = useNavigate()
 
     const handleSubmit = (e) => {
-        e.preventDefault()
-        navigate(`/search/${search}`)
+      e.preventDefault()
+      
+      if(!search) return
+      navigate(`/search?q=${search}`)
+      setSearch('')
+      
     }
 
   return (
@@ -19,8 +23,13 @@ const NavBar = () => {
         <h2>
           <Link to="/"><BiCameraMovie/>  Movie Info</Link>
         </h2>
-        <form>
-            <input type="text" placeholder="Search" />
+        <form onSubmit={handleSubmit}>
+            <input 
+            type="text" 
+            placeholder="Search movie" 
+            onChange={(e) => setSearch(e.target.value)} 
+            value={search} 
+            />
             <button type='submit'>
                 <BiSearchAlt2/>
             </button>
