@@ -9,6 +9,7 @@ import Search from './pages/Search';
 import Home from './pages/Home';
 import Movie from './pages/Movie';
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

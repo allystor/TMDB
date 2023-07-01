@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react"
+import MovieCard from "../components/MovieCard"
+
+import "./MovieGrid.css"
 
 const moviesURL = process.env.REACT_APP_TMDB_API
 const apiKey = process.env.REACT_APP_TMDB_API_KEY

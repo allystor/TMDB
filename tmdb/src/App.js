@@ -7,7 +7,6 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
-      <h1>TMDB</h1>
       <Outlet/>
     </div>
   );
