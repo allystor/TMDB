@@ -35,7 +35,7 @@ const Movie = () => {
     const movieUrl = `${moviesURL}${id}?${apiKey}`
     getMovie(movieUrl)
 
-  }, [])
+  }, [id])
 
 
   return (
